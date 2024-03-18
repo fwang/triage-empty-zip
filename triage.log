@@ -1,0 +1,540 @@
+W0318 14:35:19.591918   58320 pulumi.go:236] log level 11 will print sensitive information such as api tokens and request headers
+Updating (dev):
+I0318 14:35:20.801395   58320 update.go:203] *** Starting Update(preview=false) ***
+I0318 14:35:20.802118   58320 plugins.go:123] gatherPluginsFromProgram(): gathering plugins from language host
+I0318 14:35:20.802584   58320 plugins.go:1789] GetPluginPath(language, nodejs, <nil>): found on $PATH /Users/frank/.pulumi/bin/pulumi-language-nodejs
+I0318 14:35:20.802765   58320 plugins.go:1812] GetPluginPath(language, nodejs, <nil>): found next to current executable /Users/frank/.pulumi/bin/pulumi-language-nodejs
+I0318 14:35:20.802837   58320 plugin.go:185] newPlugin(): Launching plugin 'nodejs' from '/Users/frank/.pulumi/bin/pulumi-language-nodejs' with args: -root=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip,127.0.0.1:50140
+I0318 14:35:20.850896   58320 langruntime_plugin.go:248] langhost[nodejs].GetPluginInfo() executing
+I0318 14:35:20.851236   58320 langruntime_plugin.go:135] langhost[nodejs].GetRequiredPlugins(root=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, program=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, entryPoint=.) executing
+I0318 14:35:20.998429   58320 langruntime_plugin.go:185] langhost[nodejs].GetRequiredPlugins(root=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, program=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, entryPoint=.) success: #versions=4
+I0318 14:35:20.998571   58320 plugins.go:136] gatherPluginsFromProgram(): plugin nodejs <nil> () is required by language host
+I0318 14:35:20.998588   58320 plugins.go:136] gatherPluginsFromProgram(): plugin aws 6.25.1 () is required by language host
+I0318 14:35:20.998597   58320 plugins.go:136] gatherPluginsFromProgram(): plugin awsx 2.5.0 () is required by language host
+I0318 14:35:20.998604   58320 plugins.go:136] gatherPluginsFromProgram(): plugin docker 4.5.1 () is required by language host
+I0318 14:35:20.998611   58320 plugins.go:136] gatherPluginsFromProgram(): plugin docker 3.6.1 () is required by language host
+I0318 14:35:20.998618   58320 plugins.go:148] gatherPluginsFromSnapshot(): gathering plugins from snapshot
+I0318 14:35:20.998635   58320 plugins.go:157] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev", not a provider
+I0318 14:35:20.998651   58320 plugins.go:173] gatherPluginsFromSnapshot(): plugin aws 6.25.1 is required by first-class provider "urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1"
+I0318 14:35:20.998666   58320 plugins.go:192] ensurePluginsAreInstalled(): beginning
+I0318 14:35:20.998889   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-native-v0.18.0.lock
+I0318 14:35:20.998907   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.42.0.lock
+I0318 14:35:20.998925   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.43.0.lock
+I0318 14:35:20.998936   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.10.0.lock
+I0318 14:35:20.998947   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.12.3.lock
+I0318 14:35:20.998957   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.15.0.lock
+I0318 14:35:20.998968   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.25.1.lock
+I0318 14:35:20.998978   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.8.0.lock
+I0318 14:35:20.998990   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.9.0.lock
+I0318 14:35:20.999007   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.1.1.lock
+I0318 14:35:20.999018   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.2.0.lock
+I0318 14:35:20.999027   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.3.0.lock
+I0318 14:35:20.999037   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.5.0.lock
+I0318 14:35:20.999063   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v3.6.1.lock
+I0318 14:35:20.999071   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.4.5.lock
+I0318 14:35:20.999078   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.0.lock
+I0318 14:35:20.999092   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.1.lock
+I0318 14:35:20.999098   58320 plugins.go:1863] GetPluginPath(resource, docker, 3.6.1): enabling new plugin behavior
+I0318 14:35:20.999107   58320 plugins.go:1997] SelectCompatiblePlugin(..., docker): beginning
+I0318 14:35:20.999118   58320 plugins.go:2026] SelectCompatiblePlugin(..., docker): best plugin docker-3.6.1: semver match
+I0318 14:35:20.999123   58320 plugins.go:2030] SelectCompatiblePlugin(..., docker): skipping plugin docker-4.4.5: semver mismatch
+I0318 14:35:20.999127   58320 plugins.go:2030] SelectCompatiblePlugin(..., docker): skipping plugin docker-4.5.0: semver mismatch
+I0318 14:35:20.999132   58320 plugins.go:2030] SelectCompatiblePlugin(..., docker): skipping plugin docker-4.5.1: semver mismatch
+I0318 14:35:20.999144   58320 plugins.go:1872] GetPluginPath(resource, docker, 3.6.1): found in cache at /Users/frank/.pulumi/plugins/resource-docker-v3.6.1/pulumi-resource-docker
+I0318 14:35:20.999152   58320 plugins.go:202] ensurePluginsAreInstalled(): plugin docker 3.6.1 already installed
+I0318 14:35:20.999202   58320 plugins.go:1789] GetPluginPath(language, nodejs, <nil>): found on $PATH /Users/frank/.pulumi/bin/pulumi-language-nodejs
+I0318 14:35:20.999236   58320 plugins.go:1812] GetPluginPath(language, nodejs, <nil>): found next to current executable /Users/frank/.pulumi/bin/pulumi-language-nodejs
+I0318 14:35:20.999249   58320 plugins.go:202] ensurePluginsAreInstalled(): plugin nodejs <nil> already installed
+I0318 14:35:20.999384   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-native-v0.18.0.lock
+I0318 14:35:20.999394   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.42.0.lock
+I0318 14:35:20.999401   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.43.0.lock
+I0318 14:35:20.999412   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.10.0.lock
+I0318 14:35:20.999420   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.12.3.lock
+I0318 14:35:20.999427   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.15.0.lock
+I0318 14:35:20.999433   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.25.1.lock
+I0318 14:35:20.999440   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.8.0.lock
+I0318 14:35:20.999446   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.9.0.lock
+I0318 14:35:20.999494   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.1.1.lock
+I0318 14:35:20.999501   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.2.0.lock
+I0318 14:35:20.999508   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.3.0.lock
+I0318 14:35:20.999515   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.5.0.lock
+I0318 14:35:20.999521   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v3.6.1.lock
+I0318 14:35:20.999528   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.4.5.lock
+I0318 14:35:20.999535   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.0.lock
+I0318 14:35:20.999541   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.1.lock
+I0318 14:35:20.999546   58320 plugins.go:1863] GetPluginPath(resource, aws, 6.25.1): enabling new plugin behavior
+I0318 14:35:20.999553   58320 plugins.go:1997] SelectCompatiblePlugin(..., aws): beginning
+I0318 14:35:20.999562   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.42.0: semver mismatch
+I0318 14:35:20.999566   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.43.0: semver mismatch
+I0318 14:35:20.999580   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.8.0: semver mismatch
+I0318 14:35:20.999584   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.9.0: semver mismatch
+I0318 14:35:20.999588   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.10.0: semver mismatch
+I0318 14:35:20.999592   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.12.3: semver mismatch
+I0318 14:35:20.999596   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.15.0: semver mismatch
+I0318 14:35:20.999600   58320 plugins.go:2026] SelectCompatiblePlugin(..., aws): best plugin aws-6.25.1: semver match
+I0318 14:35:20.999611   58320 plugins.go:1872] GetPluginPath(resource, aws, 6.25.1): found in cache at /Users/frank/.pulumi/plugins/resource-aws-v6.25.1/pulumi-resource-aws
+I0318 14:35:20.999617   58320 plugins.go:202] ensurePluginsAreInstalled(): plugin aws 6.25.1 already installed
+I0318 14:35:20.999708   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-native-v0.18.0.lock
+I0318 14:35:20.999716   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.42.0.lock
+I0318 14:35:20.999723   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.43.0.lock
+I0318 14:35:20.999730   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.10.0.lock
+I0318 14:35:20.999738   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.12.3.lock
+I0318 14:35:20.999747   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.15.0.lock
+I0318 14:35:20.999753   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.25.1.lock
+I0318 14:35:20.999760   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.8.0.lock
+I0318 14:35:20.999770   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.9.0.lock
+I0318 14:35:20.999781   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.1.1.lock
+I0318 14:35:20.999788   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.2.0.lock
+I0318 14:35:20.999795   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.3.0.lock
+I0318 14:35:20.999801   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.5.0.lock
+I0318 14:35:20.999808   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v3.6.1.lock
+I0318 14:35:20.999820   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.4.5.lock
+I0318 14:35:20.999827   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.0.lock
+I0318 14:35:20.999833   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.1.lock
+I0318 14:35:20.999840   58320 plugins.go:1863] GetPluginPath(resource, awsx, 2.5.0): enabling new plugin behavior
+I0318 14:35:20.999847   58320 plugins.go:1997] SelectCompatiblePlugin(..., awsx): beginning
+I0318 14:35:20.999855   58320 plugins.go:2030] SelectCompatiblePlugin(..., awsx): skipping plugin awsx-2.1.1: semver mismatch
+I0318 14:35:20.999859   58320 plugins.go:2030] SelectCompatiblePlugin(..., awsx): skipping plugin awsx-2.2.0: semver mismatch
+I0318 14:35:20.999864   58320 plugins.go:2030] SelectCompatiblePlugin(..., awsx): skipping plugin awsx-2.3.0: semver mismatch
+I0318 14:35:20.999868   58320 plugins.go:2026] SelectCompatiblePlugin(..., awsx): best plugin awsx-2.5.0: semver match
+I0318 14:35:20.999877   58320 plugins.go:1872] GetPluginPath(resource, awsx, 2.5.0): found in cache at /Users/frank/.pulumi/plugins/resource-awsx-v2.5.0/pulumi-resource-awsx
+I0318 14:35:20.999882   58320 plugins.go:202] ensurePluginsAreInstalled(): plugin awsx 2.5.0 already installed
+I0318 14:35:20.999968   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-native-v0.18.0.lock
+I0318 14:35:20.999977   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.42.0.lock
+I0318 14:35:20.999992   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.43.0.lock
+I0318 14:35:20.999999   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.10.0.lock
+I0318 14:35:21.000009   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.12.3.lock
+I0318 14:35:21.000016   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.15.0.lock
+I0318 14:35:21.000023   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.25.1.lock
+I0318 14:35:21.000030   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.8.0.lock
+I0318 14:35:21.000036   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.9.0.lock
+I0318 14:35:21.000042   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.1.1.lock
+I0318 14:35:21.000056   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.2.0.lock
+I0318 14:35:21.000066   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.3.0.lock
+I0318 14:35:21.000073   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.5.0.lock
+I0318 14:35:21.000079   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v3.6.1.lock
+I0318 14:35:21.000086   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.4.5.lock
+I0318 14:35:21.000093   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.0.lock
+I0318 14:35:21.000100   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.1.lock
+I0318 14:35:21.000104   58320 plugins.go:1863] GetPluginPath(resource, docker, 4.5.1): enabling new plugin behavior
+I0318 14:35:21.000110   58320 plugins.go:1997] SelectCompatiblePlugin(..., docker): beginning
+I0318 14:35:21.000117   58320 plugins.go:2030] SelectCompatiblePlugin(..., docker): skipping plugin docker-3.6.1: semver mismatch
+I0318 14:35:21.000122   58320 plugins.go:2030] SelectCompatiblePlugin(..., docker): skipping plugin docker-4.4.5: semver mismatch
+I0318 14:35:21.000125   58320 plugins.go:2030] SelectCompatiblePlugin(..., docker): skipping plugin docker-4.5.0: semver mismatch
+I0318 14:35:21.000129   58320 plugins.go:2026] SelectCompatiblePlugin(..., docker): best plugin docker-4.5.1: semver match
+I0318 14:35:21.000139   58320 plugins.go:1872] GetPluginPath(resource, docker, 4.5.1): found in cache at /Users/frank/.pulumi/plugins/resource-docker-v4.5.1/pulumi-resource-docker
+I0318 14:35:21.000146   58320 plugins.go:202] ensurePluginsAreInstalled(): plugin docker 4.5.1 already installed
+I0318 14:35:21.000152   58320 plugins.go:235] ensurePluginsAreInstalled(): completed
+I0318 14:35:21.000162   58320 plugins.go:339] computeDefaultProviderPlugins(): considering nodejs
+I0318 14:35:21.000167   58320 plugins.go:342] computeDefaultProviderPlugins(): skipping nodejs, not a resource provider
+I0318 14:35:21.000173   58320 plugins.go:339] computeDefaultProviderPlugins(): considering awsx-2.5.0
+I0318 14:35:21.000177   58320 plugins.go:370] computeDefaultProviderPlugins(): plugin awsx-2.5.0 selected for package awsx (first seen)
+I0318 14:35:21.000183   58320 plugins.go:339] computeDefaultProviderPlugins(): considering docker-3.6.1
+I0318 14:35:21.000196   58320 plugins.go:370] computeDefaultProviderPlugins(): plugin docker-3.6.1 selected for package docker (first seen)
+I0318 14:35:21.000202   58320 plugins.go:339] computeDefaultProviderPlugins(): considering docker-4.5.1
+I0318 14:35:21.000207   58320 plugins.go:358] computeDefaultProviderPlugins(): plugin docker-4.5.1 selected for package docker (override, newer than previous 3.6.1)
+I0318 14:35:21.000212   58320 plugins.go:339] computeDefaultProviderPlugins(): considering aws-6.25.1
+I0318 14:35:21.000217   58320 plugins.go:370] computeDefaultProviderPlugins(): plugin aws-6.25.1 selected for package aws (first seen)
+I0318 14:35:21.000223   58320 log.go:73] computeDefaultProviderPlugins(): summary of default plugins:
+I0318 14:35:21.000241   58320 plugins.go:378]   awsx            = 2.5.0
+I0318 14:35:21.000246   58320 plugins.go:378]   docker          = 4.5.1
+I0318 14:35:21.000251   58320 plugins.go:378]   aws             = 6.25.1
+
+I0318 14:35:21.000518   58320 step_executor.go:446] StepExecutor worker(1): worker coming online
+I0318 14:35:21.000526   58320 step_executor.go:446] StepExecutor worker(4): worker coming online
+I0318 14:35:21.000542   58320 step_executor.go:446] StepExecutor worker(2): worker coming online
+I0318 14:35:21.000548   58320 step_executor.go:446] StepExecutor worker(2): worker waiting for incoming chains
+I0318 14:35:21.000549   58320 step_executor.go:446] StepExecutor worker(3): worker coming online
+I0318 14:35:21.000557   58320 step_executor.go:446] StepExecutor worker(18): worker coming online
+I0318 14:35:21.000563   58320 step_executor.go:446] StepExecutor worker(18): worker waiting for incoming chains
+I0318 14:35:21.000559   58320 langruntime_plugin.go:195] langhost[nodejs].Run(pwd=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip,root=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, program=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, entryPoint=.,#args=0,proj=triage-pulumi-empty-zip,stack=dev,#config=2,dryrun=false) executing
+I0318 14:35:21.000579   58320 step_executor.go:446] StepExecutor worker(21): worker coming online
+I0318 14:35:21.000586   58320 step_executor.go:446] StepExecutor worker(21): worker waiting for incoming chains
+I0318 14:35:21.000587   58320 step_executor.go:446] StepExecutor worker(5): worker coming online
+I0318 14:35:21.000595   58320 step_executor.go:446] StepExecutor worker(7): worker coming online
+I0318 14:35:21.000596   58320 rpc.go:77] Marshaling property for RPC[]: aws:region={us-east-1}
+I0318 14:35:21.000604   58320 step_executor.go:446] StepExecutor worker(23): worker coming online
+I0318 14:35:21.000613   58320 rpc.go:77] Marshaling property for RPC[]: pulumi:tags={map[pulumi:template:{aws-typescript}]}
+I0318 14:35:21.000611   58320 step_executor.go:446] StepExecutor worker(23): worker waiting for incoming chains
+I0318 14:35:21.000623   58320 step_executor.go:446] StepExecutor worker(31): worker coming online
+I0318 14:35:21.000614   58320 step_executor.go:446] StepExecutor worker(29): worker coming online
+I0318 14:35:21.000639   58320 step_executor.go:446] StepExecutor worker(11): worker coming online
+I0318 14:35:21.000644   58320 step_executor.go:446] StepExecutor worker(16): worker coming online
+I0318 14:35:21.000648   58320 step_executor.go:446] StepExecutor worker(17): worker coming online
+I0318 14:35:21.000656   58320 step_executor.go:446] StepExecutor worker(17): worker waiting for incoming chains
+I0318 14:35:21.000605   58320 step_executor.go:446] StepExecutor worker(8): worker coming online
+I0318 14:35:21.000668   58320 step_executor.go:446] StepExecutor worker(8): worker waiting for incoming chains
+I0318 14:35:21.000650   58320 step_executor.go:446] StepExecutor worker(16): worker waiting for incoming chains
+I0318 14:35:21.000644   58320 step_executor.go:446] StepExecutor worker(28): worker coming online
+I0318 14:35:21.000681   58320 step_executor.go:446] StepExecutor worker(28): worker waiting for incoming chains
+I0318 14:35:21.000563   58320 step_executor.go:446] StepExecutor worker(19): worker coming online
+I0318 14:35:21.000689   58320 step_executor.go:446] StepExecutor worker(19): worker waiting for incoming chains
+I0318 14:35:21.000676   58320 step_executor.go:446] StepExecutor worker(12): worker coming online
+I0318 14:35:21.000699   58320 step_executor.go:446] StepExecutor worker(12): worker waiting for incoming chains
+I0318 14:35:21.000643   58320 step_executor.go:446] StepExecutor worker(29): worker waiting for incoming chains
+I0318 14:35:21.000630   58320 step_executor.go:446] StepExecutor worker(31): worker waiting for incoming chains
+I0318 14:35:21.000542   58320 step_executor.go:446] StepExecutor worker(4): worker waiting for incoming chains
+I0318 14:35:21.000615   58320 step_executor.go:446] StepExecutor worker(27): worker coming online
+I0318 14:35:21.000730   58320 step_executor.go:446] StepExecutor worker(27): worker waiting for incoming chains
+I0318 14:35:21.000619   58320 step_executor.go:446] StepExecutor worker(30): worker coming online
+I0318 14:35:21.000741   58320 step_executor.go:446] StepExecutor worker(30): worker waiting for incoming chains
+I0318 14:35:21.000600   58320 step_executor.go:446] StepExecutor worker(22): worker coming online
+I0318 14:35:21.000750   58320 step_executor.go:446] StepExecutor worker(22): worker waiting for incoming chains
+I0318 14:35:21.000595   58320 step_executor.go:446] StepExecutor worker(5): worker waiting for incoming chains
+I0318 14:35:21.000558   58320 step_executor.go:446] StepExecutor worker(3): worker waiting for incoming chains
+I0318 14:35:21.000536   58320 step_executor.go:446] StepExecutor worker(0): worker coming online
+I0318 14:35:21.000763   58320 step_executor.go:446] StepExecutor worker(0): worker waiting for incoming chains
+I0318 14:35:21.000530   58320 step_executor.go:446] StepExecutor worker(1): worker waiting for incoming chains
+I0318 14:35:21.000542   58320 deployment_executor.go:213] deploymentExecutor.Execute(...): waiting for incoming events
+I0318 14:35:21.000564   58320 step_executor.go:446] StepExecutor worker(25): worker coming online
+I0318 14:35:21.000785   58320 step_executor.go:446] StepExecutor worker(25): worker waiting for incoming chains
+I0318 14:35:21.000569   58320 step_executor.go:446] StepExecutor worker(26): worker coming online
+I0318 14:35:21.000575   58320 step_executor.go:446] StepExecutor worker(20): worker coming online
+I0318 14:35:21.000812   58320 step_executor.go:446] StepExecutor worker(20): worker waiting for incoming chains
+I0318 14:35:21.000591   58320 step_executor.go:446] StepExecutor worker(6): worker coming online
+I0318 14:35:21.000819   58320 step_executor.go:446] StepExecutor worker(6): worker waiting for incoming chains
+I0318 14:35:21.000601   58320 step_executor.go:446] StepExecutor worker(7): worker waiting for incoming chains
+I0318 14:35:21.000621   58320 rpc.go:77] Marshaling property for RPC[]: pulumi:template={aws-typescript}
+I0318 14:35:21.000629   58320 step_executor.go:446] StepExecutor worker(13): worker coming online
+I0318 14:35:21.000849   58320 step_executor.go:446] StepExecutor worker(13): worker waiting for incoming chains
+I0318 14:35:21.000635   58320 step_executor.go:446] StepExecutor worker(15): worker coming online
+I0318 14:35:21.000860   58320 step_executor.go:446] StepExecutor worker(15): worker waiting for incoming chains
+I0318 14:35:21.000635   58320 step_executor.go:446] StepExecutor worker(10): worker coming online
+I0318 14:35:21.000875   58320 step_executor.go:446] StepExecutor worker(10): worker waiting for incoming chains
+I0318 14:35:21.000639   58320 step_executor.go:446] StepExecutor worker(24): worker coming online
+I0318 14:35:21.000888   58320 step_executor.go:446] StepExecutor worker(24): worker waiting for incoming chains
+I0318 14:35:21.000883   58320 step_executor.go:446] StepExecutor worker(26): worker waiting for incoming chains
+I0318 14:35:21.000639   58320 step_executor.go:446] StepExecutor worker(14): worker coming online
+I0318 14:35:21.000907   58320 step_executor.go:446] StepExecutor worker(14): worker waiting for incoming chains
+I0318 14:35:21.000647   58320 step_executor.go:446] StepExecutor worker(11): worker waiting for incoming chains
+I0318 14:35:21.000660   58320 step_executor.go:446] StepExecutor worker(9): worker coming online
+I0318 14:35:21.000920   58320 step_executor.go:446] StepExecutor worker(9): worker waiting for incoming chains
+I0318 14:35:21.566108   58320 source_eval.go:800] ResourceMonitor.SupportsFeature(id: secrets) = true
+I0318 14:35:21.566207   58320 eventsink.go:59] Registering resource: t=pulumi:pulumi:Stack, name=triage-pulumi-empty-zip-dev, custom=false, remote=false
+I0318 14:35:21.566284   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>Registering resource: t=pulumi:pulumi:Stack, name=triage-pulumi-empty-zip-dev, custom=false, remote=false<{%reset%}>)
+I0318 14:35:21.566321   58320 source_eval.go:1691] ResourceMonitor.RegisterResource received: t=pulumi:pulumi:Stack, name=triage-pulumi-empty-zip-dev, custom=false, #props=0, parent=, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0318 14:35:21.566357   58320 source_eval.go:191] EvalSourceIterator produced a registration: t=pulumi:pulumi:Stack,name=triage-pulumi-empty-zip-dev,#props=0
+I0318 14:35:21.566370   58320 deployment_executor.go:217] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0318 14:35:21.566378   58320 deployment_executor.go:403] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0318 14:35:21.566403   58320 step_generator.go:922] Planner decided not to update 'urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev' after diff (same) (inputs=map[])
+I0318 14:35:21.566421   58320 step_generator.go:273] Checking step same for urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev
+I0318 14:35:21.566435   58320 step_executor.go:446] StepExecutor worker(2): worker received chain for execution
+I0318 14:35:21.566481   58320 snapshot.go:134] SnapshotManager: Beginning mutation for step `same` on resource `urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev`
+I0318 14:35:21.566491   58320 step_executor.go:446] StepExecutor worker(2): applying step same on urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev (preview false)
+I0318 14:35:21.566504   58320 snapshot.go:292] SnapshotManager: sameSnapshotMutation.End(..., true)
+    pulumi:pulumi:Stack triage-pulumi-empty-zip-dev running 
+I0318 14:35:21.566519   58320 snapshot.go:572] SnapshotManager.markOperationComplete(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev)
+I0318 14:35:21.566535   58320 snapshot.go:549] Marked old state snapshot as done: urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev
+I0318 14:35:21.566542   58320 snapshot.go:558] Appended new state snapshot to be written: urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev
+I0318 14:35:21.566548   58320 snapshot.go:285] SnapshotManager: mustWrite() false
+I0318 14:35:21.566554   58320 snapshot.go:316] SnapshotManager: sameSnapshotMutation.End() eliding write
+I0318 14:35:21.566563   58320 step_executor.go:446] StepExecutor worker(2): step same on urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev retired
+I0318 14:35:21.566571   58320 step_executor.go:446] StepExecutor worker(2): worker waiting for incoming chains
+I0318 14:35:21.566581   58320 source_eval.go:1915] ResourceMonitor.RegisterResource operation finished: t=pulumi:pulumi:Stack, urn=urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev, #outs=0
+I0318 14:35:21.569985   58320 eventsink.go:59] RegisterResource RPC prepared: t=pulumi:pulumi:Stack, name=triage-pulumi-empty-zip-dev
+I0318 14:35:21.570000   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>RegisterResource RPC prepared: t=pulumi:pulumi:Stack, name=triage-pulumi-empty-zip-dev<{%reset%}>)
+I0318 14:35:21.571823   58320 source_eval.go:800] ResourceMonitor.SupportsFeature(id: resourceReferences) = true
+I0318 14:35:21.576660   58320 source_eval.go:800] ResourceMonitor.SupportsFeature(id: outputValues) = true
+I0318 14:35:21.577576   58320 eventsink.go:59] RegisterResource RPC finished: resource:triage-pulumi-empty-zip-dev[pulumi:pulumi:Stack]; err: null, resp: urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev,,,,
+I0318 14:35:21.577596   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>RegisterResource RPC finished: resource:triage-pulumi-empty-zip-dev[pulumi:pulumi:Stack]; err: null, resp: urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev,,,,<{%reset%}>)
+I0318 14:35:21.578284   58320 source_eval.go:800] ResourceMonitor.SupportsFeature(id: deletedWith) = true
+I0318 14:35:21.580179   58320 source_eval.go:800] ResourceMonitor.SupportsFeature(id: aliasSpecs) = true
+I0318 14:35:21.581873   58320 source_eval.go:800] ResourceMonitor.SupportsFeature(id: transforms) = true
+I0318 14:35:21.588341   58320 eventsink.go:59] Running program '/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip' in pwd '/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip' w/ args: 
+I0318 14:35:21.588359   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>Running program '/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip' in pwd '/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip' w/ args: <{%reset%}>)
+@ updating....I0318 14:35:22.307501   58320 eventsink.go:59] Registering resource: t=aws:lambda/function:Function, name=fn, custom=true, remote=false
+I0318 14:35:22.307588   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>Registering resource: t=aws:lambda/function:Function, name=fn, custom=true, remote=false<{%reset%}>)
+I0318 14:35:22.308031   58320 rpc.go:292] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(aws:lambda/function:Function,fn)]: 4dabf18193072939515e22adb298388d={0def7320c3a5731c473e5ecbe6d01bc7}
+I0318 14:35:22.308060   58320 rpc.go:292] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(aws:lambda/function:Function,fn)]: __pulumiArchive={true}
+I0318 14:35:22.308069   58320 rpc.go:292] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(aws:lambda/function:Function,fn)]: path={./test-function}
+I0318 14:35:22.308450   58320 rpc.go:292] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(aws:lambda/function:Function,fn)]: code={&{0def7320c3a5731c473e5ecbe6d01bc7 d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1 map[] ./test-function }}
+I0318 14:35:22.308469   58320 rpc.go:292] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(aws:lambda/function:Function,fn)]: handler={index.handler}
+I0318 14:35:22.308476   58320 rpc.go:292] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(aws:lambda/function:Function,fn)]: role={arn:aws:iam::112245769880:role/next-ion-frank-WebImageOptimizerRole-useast1}
+I0318 14:35:22.308482   58320 rpc.go:292] Unmarshaling property for RPC[ResourceMonitor.RegisterResource(aws:lambda/function:Function,fn)]: runtime={nodejs20.x}
+I0318 14:35:22.308512   58320 source_eval.go:396] handling default provider request for package aws-6.25.1
+I0318 14:35:22.308534   58320 source_eval.go:452] checking if providers.ProviderRequest{version:(*semver.Version)(0x14000b9d4a0), pkg:"aws", pluginDownloadURL:"", pluginChecksums:map[string][]uint8(nil)} should be denied
+I0318 14:35:22.308559   58320 source_eval.go:492] Did not find a config for 'pulumi'
+I0318 14:35:22.308569   58320 source_eval.go:326] newRegisterDefaultProviderEvent(aws-6.25.1): using version 6.25.1 from request
+I0318 14:35:22.308576   58320 source_eval.go:345] newRegisterDefaultProviderEvent(aws-6.25.1): no pluginDownloadURL specified, falling back to default pluginDownloadURL
+I0318 14:35:22.308584   58320 source_eval.go:353] newRegisterDefaultProviderEvent(aws-6.25.1): default pluginDownloadURL miss, sending empty string to engine
+I0318 14:35:22.308591   58320 source_eval.go:363] newRegisterDefaultProviderEvent(aws-6.25.1): no pluginChecksums specified, falling back to default pluginChecksums
+I0318 14:35:22.308598   58320 source_eval.go:371] newRegisterDefaultProviderEvent(aws-6.25.1): default pluginChecksums miss, sending empty map to engine
+I0318 14:35:22.308627   58320 source_eval.go:429] waiting for default provider for package aws-6.25.1
+I0318 14:35:22.308636   58320 source_eval.go:191] EvalSourceIterator produced a registration: t=pulumi:providers:aws,name=default_6_25_1,#props=2
+I0318 14:35:22.308650   58320 deployment_executor.go:217] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0318 14:35:22.308658   58320 deployment_executor.go:403] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0318 14:35:22.308709   58320 registry.go:309] ProviderRegistry.Check(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1) executing (#olds=5,#news=2)
+I0318 14:35:22.308971   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-native-v0.18.0.lock
+I0318 14:35:22.308987   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.42.0.lock
+I0318 14:35:22.309000   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v5.43.0.lock
+I0318 14:35:22.309011   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.10.0.lock
+I0318 14:35:22.309021   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.12.3.lock
+I0318 14:35:22.309030   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.15.0.lock
+I0318 14:35:22.309040   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.25.1.lock
+I0318 14:35:22.309049   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.8.0.lock
+I0318 14:35:22.309059   58320 plugins.go:2093] skipping file in plugin directory: resource-aws-v6.9.0.lock
+I0318 14:35:22.309071   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.1.1.lock
+I0318 14:35:22.309083   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.2.0.lock
+I0318 14:35:22.309092   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.3.0.lock
+I0318 14:35:22.309103   58320 plugins.go:2093] skipping file in plugin directory: resource-awsx-v2.5.0.lock
+I0318 14:35:22.309112   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v3.6.1.lock
+I0318 14:35:22.309124   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.4.5.lock
+I0318 14:35:22.309132   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.0.lock
+I0318 14:35:22.309144   58320 plugins.go:2093] skipping file in plugin directory: resource-docker-v4.5.1.lock
+I0318 14:35:22.309150   58320 plugins.go:1863] GetPluginPath(resource, aws, 6.25.1): enabling new plugin behavior
+I0318 14:35:22.309161   58320 plugins.go:1997] SelectCompatiblePlugin(..., aws): beginning
+I0318 14:35:22.309174   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.42.0: semver mismatch
+I0318 14:35:22.309180   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-5.43.0: semver mismatch
+I0318 14:35:22.309185   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.8.0: semver mismatch
+I0318 14:35:22.309190   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.9.0: semver mismatch
+I0318 14:35:22.309194   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.10.0: semver mismatch
+I0318 14:35:22.309199   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.12.3: semver mismatch
+I0318 14:35:22.309203   58320 plugins.go:2030] SelectCompatiblePlugin(..., aws): skipping plugin aws-6.15.0: semver mismatch
+I0318 14:35:22.309208   58320 plugins.go:2026] SelectCompatiblePlugin(..., aws): best plugin aws-6.25.1: semver match
+I0318 14:35:22.309221   58320 plugins.go:1872] GetPluginPath(resource, aws, 6.25.1): found in cache at /Users/frank/.pulumi/plugins/resource-aws-v6.25.1/pulumi-resource-aws
+I0318 14:35:22.309241   58320 plugin.go:185] newPlugin(): Launching plugin 'aws (resource)' from '/Users/frank/.pulumi/plugins/resource-aws-v6.25.1/pulumi-resource-aws' with args: 127.0.0.1:50140
+I0318 14:35:22.310097   58320 eventsink.go:59] RegisterResource RPC prepared: t=aws:lambda/function:Function, name=fn
+I0318 14:35:22.310204   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>RegisterResource RPC prepared: t=aws:lambda/function:Function, name=fn<{%reset%}>)
+..I0318 14:35:23.885674   58320 provider_plugin.go:1744] Provider[aws, 0x14001a346c0].GetPluginInfo() executing
+I0318 14:35:23.886489   58320 provider_plugin.go:1769] Provider[aws, 0x14001a346c0].GetPluginInfo() success (#version=6.25.1) success
+I0318 14:35:23.886542   58320 provider_plugin.go:321] Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1) executing (#olds=5,#news=2)
+I0318 14:35:23.886579   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).olds]: region={us-east-1}
+I0318 14:35:23.886587   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).olds]: skipCredentialsValidation={false}
+I0318 14:35:23.886592   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).olds]: skipMetadataApiCheck={true}
+I0318 14:35:23.886597   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).olds]: skipRegionValidation={true}
+I0318 14:35:23.886602   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).olds]: version={6.25.1}
+I0318 14:35:23.886607   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).news]: region={us-east-1}
+I0318 14:35:23.886615   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).news]: version={6.25.1}
+I0318 14:35:23.890223   58320 eventsink.go:59] pulumi-aws: starting to validate credentials. Disable this by AWS_SKIP_CREDENTIALS_VALIDATION or skipCredentialsValidation option
+I0318 14:35:23.890250   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>pulumi-aws: starting to validate credentials. Disable this by AWS_SKIP_CREDENTIALS_VALIDATION or skipCredentialsValidation option<{%reset%}>)
+I0318 14:35:23.893098   58320 eventsink.go:59] missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.893127   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:23.893309   58320 eventsink.go:59] missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.893322   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:23.893452   58320 eventsink.go:59] missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.893461   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:23.893604   58320 eventsink.go:59] missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.893635   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:23.894270   58320 eventsink.go:59] missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.894280   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:23.894432   58320 eventsink.go:59] missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.894441   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:23.894547   58320 eventsink.go:59] missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.894555   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:23.894685   58320 eventsink.go:59] missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:23.894704   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.153408   58320 eventsink.go:59] pulumi-aws: credentials are valid
+I0318 14:35:24.153515   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>pulumi-aws: credentials are valid<{%reset%}>)
+I0318 14:35:24.156195   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).inputs]: region={us-east-1}
+I0318 14:35:24.156257   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).inputs]: skipCredentialsValidation={false}
+I0318 14:35:24.156270   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).inputs]: skipMetadataApiCheck={true}
+I0318 14:35:24.156279   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).inputs]: skipRegionValidation={true}
+I0318 14:35:24.156290   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).inputs]: version={6.25.1}
+I0318 14:35:24.156303   58320 provider_plugin.go:380] Provider[aws, 0x14001a346c0].CheckConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1) success: inputs=#5 failures=#0
+I0318 14:35:24.156350   58320 registry.go:220] setProvider(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::unconfigured)
+I0318 14:35:24.156390   58320 registry.go:362] ProviderRegistry.Diff(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1,668942d7-b61c-47c3-b706-3dd88e1e7c4c): executing (#oldInputs=5#oldOutputs=5,#newInputs=5)
+I0318 14:35:24.156408   58320 registry.go:210] GetProvider(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::unconfigured)
+I0318 14:35:24.156423   58320 provider_plugin.go:423] Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1): executing (#oldInputs=5#oldOutputs=5,#newInputs=5)
+I0318 14:35:24.156441   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldInputs]: region={us-east-1}
+I0318 14:35:24.156451   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldInputs]: skipCredentialsValidation={false}
+I0318 14:35:24.156459   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldInputs]: skipMetadataApiCheck={true}
+I0318 14:35:24.156467   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldInputs]: skipRegionValidation={true}
+I0318 14:35:24.156474   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldInputs]: version={6.25.1}
+I0318 14:35:24.156484   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldOutputs]: region={us-east-1}
+I0318 14:35:24.156492   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldOutputs]: skipCredentialsValidation={false}
+I0318 14:35:24.156499   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldOutputs]: skipMetadataApiCheck={true}
+I0318 14:35:24.156506   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldOutputs]: skipRegionValidation={true}
+I0318 14:35:24.156513   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).oldOutputs]: version={6.25.1}
+I0318 14:35:24.156523   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).newInputs]: region={us-east-1}
+I0318 14:35:24.156530   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).newInputs]: skipCredentialsValidation={false}
+I0318 14:35:24.156537   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).newInputs]: skipMetadataApiCheck={true}
+I0318 14:35:24.156551   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).newInputs]: skipRegionValidation={true}
+I0318 14:35:24.156558   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1).newInputs]: version={6.25.1}
+I0318 14:35:24.160010   58320 provider_plugin.go:510] Provider[aws, 0x14001a346c0].DiffConfig(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1) success: changes=0 #replaces=[] #stables=[] delbefrepl=false, diffs=#[]
+I0318 14:35:24.160091   58320 registry.go:395] ProviderRegistry.Diff(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1,668942d7-b61c-47c3-b706-3dd88e1e7c4c): executed (1, []resource.PropertyKey(nil))
+I0318 14:35:24.160132   58320 step_generator.go:922] Planner decided not to update 'urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1' after diff (same) (inputs=map[region:{us-east-1} skipCredentialsValidation:{false} skipMetadataApiCheck:{true} skipRegionValidation:{true} version:{6.25.1}])
+I0318 14:35:24.160159   58320 step_generator.go:273] Checking step same for urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1
+I0318 14:35:24.160183   58320 step_executor.go:446] StepExecutor worker(18): worker received chain for execution
+I0318 14:35:24.160290   58320 snapshot.go:134] SnapshotManager: Beginning mutation for step `same` on resource `urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1`
+I0318 14:35:24.160307   58320 step_executor.go:446] StepExecutor worker(18): applying step same on urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1 (preview false)
+I0318 14:35:24.160320   58320 registry.go:414] Same(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::668942d7-b61c-47c3-b706-3dd88e1e7c4c)
+I0318 14:35:24.160329   58320 registry.go:210] GetProvider(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::668942d7-b61c-47c3-b706-3dd88e1e7c4c)
+I0318 14:35:24.160344   58320 provider_plugin.go:674] Provider[aws, 0x14001a346c0].Configure() executing (#vars=5)
+I0318 14:35:24.160358   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Configure().inputs]: region={us-east-1}
+I0318 14:35:24.160369   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Configure().inputs]: skipCredentialsValidation={false}
+I0318 14:35:24.160376   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Configure().inputs]: skipMetadataApiCheck={true}
+I0318 14:35:24.160384   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Configure().inputs]: skipRegionValidation={true}
+I0318 14:35:24.160391   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Configure().inputs]: version={6.25.1}
+I0318 14:35:24.160403   58320 registry.go:456] loaded provider urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::668942d7-b61c-47c3-b706-3dd88e1e7c4c
+I0318 14:35:24.160411   58320 registry.go:220] setProvider(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::668942d7-b61c-47c3-b706-3dd88e1e7c4c)
+I0318 14:35:24.160492   58320 snapshot.go:292] SnapshotManager: sameSnapshotMutation.End(..., true)
+I0318 14:35:24.160516   58320 snapshot.go:572] SnapshotManager.markOperationComplete(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1)
+I0318 14:35:24.160525   58320 snapshot.go:549] Marked old state snapshot as done: urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1
+I0318 14:35:24.160651   58320 snapshot.go:558] Appended new state snapshot to be written: urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1
+I0318 14:35:24.160672   58320 snapshot.go:285] SnapshotManager: mustWrite() false
+I0318 14:35:24.160682   58320 snapshot.go:316] SnapshotManager: sameSnapshotMutation.End() eliding write
+I0318 14:35:24.160696   58320 step_executor.go:446] StepExecutor worker(18): step same on urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1 retired
+I0318 14:35:24.160714   58320 step_executor.go:446] StepExecutor worker(18): worker waiting for incoming chains
+I0318 14:35:24.160738   58320 source_eval.go:438] registered default provider for package aws-6.25.1: urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1
+I0318 14:35:24.160815   58320 source_eval.go:1691] ResourceMonitor.RegisterResource received: t=aws:lambda/function:Function, name=fn, custom=true, #props=4, parent=urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:pulumi:Stack::triage-pulumi-empty-zip-dev, protect=false, provider=urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::668942d7-b61c-47c3-b706-3dd88e1e7c4c, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0318 14:35:24.160863   58320 source_eval.go:191] EvalSourceIterator produced a registration: t=aws:lambda/function:Function,name=fn,#props=4
+I0318 14:35:24.160878   58320 deployment_executor.go:217] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0318 14:35:24.160889   58320 deployment_executor.go:403] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0318 14:35:24.161000   58320 registry.go:210] GetProvider(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::668942d7-b61c-47c3-b706-3dd88e1e7c4c)
+I0318 14:35:24.161032   58320 provider_plugin.go:758] Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn) executing (#olds=0,#news=4)
+I0318 14:35:24.165616   58320 eventsink.go:59] missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.165661   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.165921   58320 eventsink.go:59] missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.165945   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.166115   58320 eventsink.go:59] missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.166130   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.166295   58320 eventsink.go:59] missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.166313   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.166840   58320 eventsink.go:59] missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.166855   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `playground` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.167019   58320 eventsink.go:59] missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.167037   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.167201   58320 eventsink.go:59] missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.167214   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `prod-frank` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.167372   58320 eventsink.go:59] missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2
+I0318 14:35:24.167392   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>missing_context: A profile defined with name `synergos` is ignored. For use within a shared configuration file, a non-default profile must have `profile ` prefixed to the profile name. tf_aws.sdk=aws-sdk-go-v2<{%reset%}>)
+I0318 14:35:24.375462   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).news]: code={&{0def7320c3a5731c473e5ecbe6d01bc7 d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1 map[] ./test-function }}
+I0318 14:35:24.375573   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).news]: 4dabf18193072939515e22adb298388d={0def7320c3a5731c473e5ecbe6d01bc7}
+I0318 14:35:24.375607   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).news]: hash={d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1}
+I0318 14:35:24.375632   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).news]: path={./test-function}
+I0318 14:35:24.375646   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).news]: handler={index.handler}
+I0318 14:35:24.375657   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).news]: role={arn:aws:iam::112245769880:role/next-ion-frank-WebImageOptimizerRole-useast1}
+I0318 14:35:24.375675   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).news]: runtime={nodejs20.x}
+I0318 14:35:24.382236   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: __defaults={[{memorySize} {name} {packageType} {publish} {reservedConcurrentExecutions} {skipDestroy} {timeout}]}
+I0318 14:35:24.382311   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: 4dabf18193072939515e22adb298388d={0def7320c3a5731c473e5ecbe6d01bc7}
+I0318 14:35:24.382391   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: hash={d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1}
+I0318 14:35:24.382414   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: path={./test-function}
+I0318 14:35:24.382454   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: code={&{0def7320c3a5731c473e5ecbe6d01bc7 d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1 map[] ./test-function }}
+I0318 14:35:24.382474   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: handler={index.handler}
+I0318 14:35:24.382501   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: memorySize={128}
+I0318 14:35:24.382519   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: name={fn-e213555}
+I0318 14:35:24.382535   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: packageType={Zip}
+I0318 14:35:24.382552   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: publish={false}
+I0318 14:35:24.382579   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: reservedConcurrentExecutions={-1}
+I0318 14:35:24.382599   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: role={arn:aws:iam::112245769880:role/next-ion-frank-WebImageOptimizerRole-useast1}
+I0318 14:35:24.382620   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: runtime={nodejs20.x}
+I0318 14:35:24.382637   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: skipDestroy={false}
+I0318 14:35:24.382659   58320 rpc.go:292] Unmarshaling property for RPC[Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: timeout={3}
+I0318 14:35:24.382691   58320 provider_plugin.go:832] Provider[aws, 0x14001a346c0].Check(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn) success: inputs=#12 failures=#0
+I0318 14:35:24.382789   58320 step_generator.go:960] Planner decided to create 'urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn' (inputs=map[__defaults:{[{memorySize} {name} {packageType} {publish} {reservedConcurrentExecutions} {skipDestroy} {timeout}]} code:{&{0def7320c3a5731c473e5ecbe6d01bc7 d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1 map[] ./test-function }} handler:{index.handler} memorySize:{128} name:{fn-e213555} packageType:{Zip} publish:{false} reservedConcurrentExecutions:{-1} role:{arn:aws:iam::112245769880:role/next-ion-frank-WebImageOptimizerRole-useast1} runtime:{nodejs20.x} skipDestroy:{false} timeout:{3}])
+I0318 14:35:24.382850   58320 step_generator.go:273] Checking step create for urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn
+I0318 14:35:24.382899   58320 step_executor.go:446] StepExecutor worker(21): worker received chain for execution
+I0318 14:35:24.383222   58320 snapshot.go:134] SnapshotManager: Beginning mutation for step `create` on resource `urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn`
+I0318 14:35:24.383251   58320 snapshot.go:327] SnapshotManager.doCreate(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn)
+I0318 14:35:24.383284   58320 snapshot.go:565] SnapshotManager.markPendingOperation(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn, creating)
+
+ +  aws:lambda:Function fn creating (0s) 
+I0318 14:35:24.519216   58320 state.go:342] error copying .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz to .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz.bak: blob (key ".pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz -> .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz.bak") (code=NotFound): NoSuchKey: The specified key does not exist.
+	status code: 404, request id: 45MMQ4MDY2CEMZ5V, host id: f+va++cFPu9bPyXTCc/e0iYecgwA5qzslHAAZRvj4xb0g541f9tlnmvFaHtDfnnJS2QuJ6qZglQ=
+I0318 14:35:24.570195   58320 state.go:348] error deleting source object after rename: .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz (blob (key ".pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz") (code=NotFound): NotFound: Not Found
+	status code: 404, request id: 45MH159BNHJ02MBG, host id: O8V5Am1ZJGrZAZTQlYGXLDgOI+qKmj6sykLVtL6MRbhLsTiuTysE8GiC0ZZXisYFHNzivMbecGw=) skipping
+I0318 14:35:24.762901   58320 state.go:281] Saved stack organization/triage-pulumi-empty-zip/dev checkpoint to: .pulumi/stacks/triage-pulumi-empty-zip/dev.json (backup=.pulumi/stacks/triage-pulumi-empty-zip/dev.json.bak)
+I0318 14:35:24.763055   58320 step_executor.go:446] StepExecutor worker(21): applying step create on urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn (preview false)
+I0318 14:35:24.763096   58320 registry.go:210] GetProvider(urn:pulumi:dev::triage-pulumi-empty-zip::pulumi:providers:aws::default_6_25_1::668942d7-b61c-47c3-b706-3dd88e1e7c4c)
+I0318 14:35:24.763140   58320 provider_plugin.go:952] Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn) executing (#props=12)
+I0318 14:35:24.763191   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: __defaults={[{memorySize} {name} {packageType} {publish} {reservedConcurrentExecutions} {skipDestroy} {timeout}]}
+I0318 14:35:24.763231   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: code={&{0def7320c3a5731c473e5ecbe6d01bc7 d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1 map[] ./test-function }}
+I0318 14:35:24.763256   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: 4dabf18193072939515e22adb298388d={0def7320c3a5731c473e5ecbe6d01bc7}
+I0318 14:35:24.763267   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: hash={d9cf1a99d862f2257659e0930d41040d34d81e7eab22ed84177778f6453b63a1}
+I0318 14:35:24.763277   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: path={./test-function}
+I0318 14:35:24.763286   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: handler={index.handler}
+I0318 14:35:24.763300   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: memorySize={128}
+I0318 14:35:24.763309   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: name={fn-e213555}
+I0318 14:35:24.763374   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: packageType={Zip}
+I0318 14:35:24.763393   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: publish={false}
+I0318 14:35:24.763417   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: reservedConcurrentExecutions={-1}
+I0318 14:35:24.763439   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: role={arn:aws:iam::112245769880:role/next-ion-frank-WebImageOptimizerRole-useast1}
+I0318 14:35:24.763463   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: runtime={nodejs20.x}
+I0318 14:35:24.763480   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: skipDestroy={false}
+I0318 14:35:24.763497   58320 rpc.go:77] Marshaling property for RPC[Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn).inputs]: timeout={3}
+I0318 14:35:24.775611   58320 eventsink.go:59] Waiting for state to become: [success]
+I0318 14:35:24.775695   58320 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for state to become: [success]<{%reset%}>)
+@ updating....I0318 14:35:25.088455   58320 provider_plugin.go:1856] provider received rpc error `Unknown`: `1 error occurred:
+	* creating Lambda Function (fn-e213555): operation error Lambda: CreateFunction, https response error StatusCode: 400, RequestID: 841cfde3-8b01-4f45-b900-765042009fc2, InvalidParameterValueException: Uploaded file must be a non-empty zip
+
+`
+I0318 14:35:25.088557   58320 provider_plugin.go:1860] rpc error kind `Unknown` may not be recoverable
+I0318 14:35:25.088582   58320 provider_plugin.go:1009] Provider[aws, 0x14001a346c0].Create(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn) failed: 1 error occurred:
+	* creating Lambda Function (fn-e213555): operation error Lambda: CreateFunction, https response error StatusCode: 400, RequestID: 841cfde3-8b01-4f45-b900-765042009fc2, InvalidParameterValueException: Uploaded file must be a non-empty zip
+
+I0318 14:35:25.088632   58320 eventsink.go:86] eventSink::Error(<{%reset%}>1 error occurred:
+	* creating Lambda Function (fn-e213555): operation error Lambda: CreateFunction, https response error StatusCode: 400, RequestID: 841cfde3-8b01-4f45-b900-765042009fc2, InvalidParameterValueException: Uploaded file must be a non-empty zip
+
+<{%reset%}>)
+
+ +  aws:lambda:Function fn creating (0s) error: 1 error occurred:
+I0318 14:35:25.088811   58320 snapshot.go:345] SnapshotManager: createSnapshotMutation.End(..., false)
+I0318 14:35:25.088833   58320 snapshot.go:572] SnapshotManager.markOperationComplete(urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn)
+ +  aws:lambda:Function fn **creating failed** error: 1 error occurred:
+I0318 14:35:25.215545   58320 state.go:342] error copying .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz to .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz.bak: blob (key ".pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz -> .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz.bak") (code=NotFound): NoSuchKey: The specified key does not exist.
+	status code: 404, request id: 40MWWPA1EVVJ3727, host id: lFc/tKfLxS4Eta9nMlOCp60habzT8RyVZTJGDkaqXiDcoVuqCnsfpwoKmELv7IYp3xJjj+y6bJg=
+I0318 14:35:25.268253   58320 state.go:348] error deleting source object after rename: .pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz (blob (key ".pulumi/stacks/triage-pulumi-empty-zip/dev.json.gz") (code=NotFound): NotFound: Not Found
+	status code: 404, request id: 40MSJMFRW3PGGEK4, host id: 06tixbZj8edAmyefrQ6VLi+v8u8wxsE7KeO/eZXta/bQdKWmAqHlnUmxiLwDlFRm5+opKPt3oX0=) skipping
+I0318 14:35:25.616241   58320 state.go:281] Saved stack organization/triage-pulumi-empty-zip/dev checkpoint to: .pulumi/stacks/triage-pulumi-empty-zip/dev.json (backup=.pulumi/stacks/triage-pulumi-empty-zip/dev.json.bak)
+I0318 14:35:25.616517   58320 step_executor.go:446] StepExecutor worker(21): step create on urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn failed with an error: 1 error occurred:
+	* creating Lambda Function (fn-e213555): operation error Lambda: CreateFunction, https response error StatusCode: 400, RequestID: 841cfde3-8b01-4f45-b900-765042009fc2, InvalidParameterValueException: Uploaded file must be a non-empty zip
+
+I0318 14:35:25.616575   58320 step_executor.go:446] StepExecutor worker(21): step create on urn:pulumi:dev::triage-pulumi-empty-zip::aws:lambda/function:Function::fn failed, signalling cancellation
+I0318 14:35:25.616644   58320 step_executor.go:446] StepExecutor worker(21): worker waiting for incoming chains
+I0318 14:35:25.616659   58320 step_executor.go:446] StepExecutor worker(1): worker exiting due to cancellation
+I0318 14:35:25.616700   58320 step_executor.go:446] StepExecutor worker(30): worker exiting due to cancellation
+I0318 14:35:25.616704   58320 step_executor.go:446] StepExecutor worker(12): worker exiting due to cancellation
+I0318 14:35:25.616683   58320 step_executor.go:446] StepExecutor worker(23): worker exiting due to cancellation
+I0318 14:35:25.616767   58320 step_executor.go:446] StepExecutor worker(15): worker exiting due to cancellation
+I0318 14:35:25.616783   58320 step_executor.go:446] StepExecutor worker(7): worker exiting due to cancellation
+I0318 14:35:25.616682   58320 step_executor.go:446] StepExecutor worker(31): worker exiting due to cancellation
+I0318 14:35:25.616693   58320 step_executor.go:446] StepExecutor worker(29): worker exiting due to cancellation
+I0318 14:35:25.616687   58320 step_executor.go:446] StepExecutor worker(22): worker exiting due to cancellation
+I0318 14:35:25.616672   58320 step_executor.go:446] StepExecutor worker(21): worker exiting due to cancellation
+I0318 14:35:25.616705   58320 step_executor.go:446] StepExecutor worker(0): worker exiting due to cancellation
+I0318 14:35:25.616714   58320 step_executor.go:446] StepExecutor worker(19): worker exiting due to cancellation
+I0318 14:35:25.616716   58320 step_executor.go:446] StepExecutor worker(3): worker exiting due to cancellation
+I0318 14:35:25.616725   58320 step_executor.go:446] StepExecutor worker(5): worker exiting due to cancellation
+I0318 14:35:25.616727   58320 step_executor.go:446] StepExecutor worker(28): worker exiting due to cancellation
+I0318 14:35:25.616721   58320 deployment_executor.go:259] deploymentExecutor.Execute(...): context finished: context canceled
+I0318 14:35:25.616984   58320 step_executor.go:446] StepExecutor worker(-1): StepExecutor.waitForCompletion(): waiting for worker threads to exit
+I0318 14:35:25.616737   58320 step_executor.go:446] StepExecutor worker(18): worker exiting due to cancellation
+I0318 14:35:25.616741   58320 step_executor.go:446] StepExecutor worker(16): worker exiting due to cancellation
+I0318 14:35:25.616734   58320 step_executor.go:446] StepExecutor worker(27): worker exiting due to cancellation
+I0318 14:35:25.616749   58320 step_executor.go:446] StepExecutor worker(8): worker exiting due to cancellation
+I0318 14:35:25.616752   58320 step_executor.go:446] StepExecutor worker(2): worker exiting due to cancellation
+I0318 14:35:25.616757   58320 step_executor.go:446] StepExecutor worker(17): worker exiting due to cancellation
+I0318 14:35:25.616757   58320 step_executor.go:446] StepExecutor worker(4): worker exiting due to cancellation
+I0318 14:35:25.616768   58320 step_executor.go:446] StepExecutor worker(6): worker exiting due to cancellation
+I0318 14:35:25.616769   58320 step_executor.go:446] StepExecutor worker(9): worker exiting due to cancellation
+I0318 14:35:25.616775   58320 step_executor.go:446] StepExecutor worker(13): worker exiting due to cancellation
+I0318 14:35:25.616778   58320 step_executor.go:446] StepExecutor worker(20): worker exiting due to cancellation
+I0318 14:35:25.616778   58320 step_executor.go:446] StepExecutor worker(26): worker exiting due to cancellation
+I0318 14:35:25.616795   58320 step_executor.go:446] StepExecutor worker(24): worker exiting due to cancellation
+I0318 14:35:25.616796   58320 step_executor.go:446] StepExecutor worker(11): worker exiting due to cancellation
+I0318 14:35:25.616799   58320 step_executor.go:446] StepExecutor worker(25): worker exiting due to cancellation
+I0318 14:35:25.616803   58320 step_executor.go:446] StepExecutor worker(10): worker exiting due to cancellation
+I0318 14:35:25.616808   58320 step_executor.go:446] StepExecutor worker(14): worker exiting due to cancellation
+I0318 14:35:25.617314   58320 step_executor.go:446] StepExecutor worker(-1): StepExecutor.waitForCompletion(): worker threads all exited
+I0318 14:35:25.617338   58320 deployment_executor.go:269] deploymentExecutor.Execute(...): step executor has completed
+I0318 14:35:25.617370   58320 eventsink.go:86] eventSink::Error(<{%reset%}>update failed<{%reset%}>)
+I0318 14:35:25.617463   58320 deployment_executor.go:138] deploymentExecutor.Execute(...): exiting provider canceller
+    pulumi:pulumi:Stack triage-pulumi-empty-zip-dev running error: update failed
+I0318 14:35:25.628021   58320 langruntime_plugin.go:234] langhost[nodejs].Run(pwd=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip,root=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, program=/Users/frank/Sites/fwang/remove/triage-pulumi-empty-zip, entryPoint=.,...,dryrun=false) failed: err=grpc: the client connection is closing
+I0318 14:35:25.628130   58320 source_eval.go:211] EvalSourceIterator ended with an error: grpc: the client connection is closing
+I0318 14:35:25.628155   58320 deployment_executor.go:198] deploymentExecutor.Execute(...): incoming events goroutine exiting
+I0318 14:35:25.638735   58320 update.go:208] *** Update(preview=false) complete ***
+    pulumi:pulumi:Stack triage-pulumi-empty-zip-dev **failed** 1 error
+Diagnostics:
+  aws:lambda:Function (fn):
+    error: 1 error occurred:
+    	* creating Lambda Function (fn-e213555): operation error Lambda: CreateFunction, https response error StatusCode: 400, RequestID: 841cfde3-8b01-4f45-b900-765042009fc2, InvalidParameterValueException: Uploaded file must be a non-empty zip
+
+  pulumi:pulumi:Stack (triage-pulumi-empty-zip-dev):
+    error: update failed
+
+Resources:
+    1 unchanged
+
+Duration: 5s
+
